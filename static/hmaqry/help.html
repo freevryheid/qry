@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Help</title>
+</head>
+<body>
+    <h1>Help</h1>
+    <h2>About</h2>
+    <p>
+        This web application can be used to query the TxDOT
+        SiteManager database for hot-mix asphalt (HMA) related items.
+    </p>
+    <h2>Query</h2>
+    <p>
+        Queries are run based on user defined settings. The items to include
+        in the query are selected in the left panels. This allows queries to
+        be tailored to specific mixtures, locations, etc, based on the items
+        selected in each of the panels. These panels include multi-selection
+        parent/child type trees to facilitate the selection or de-selection of
+        query groups as defined below. Selecting the "Root" node will select all
+        of its children. Once all query selections have been made, the Data Query
+        panel provides options to extract information from the SiteManager database.
+    </p>
+    <h3>Mixtures</h3>
+    <p>
+        Select the HMA mixtures to query by clicking the respective checkboxes.
+        HMA mixtures have been sub-divided by diffferent mixture types:
+        <ul>
+            <li>Dense-graded asphalt (DGA)</li>
+            <li>Permeable friction course (PFC)</li>
+            <li>Performance-related mixtures (PERF)</li>
+            <li>Stone-matrix asphalt (SMA)</li>
+            <li>Thin overlay mixtures (TOM)</li>
+            <li>Thin bonded wearing course (TBWC)</li>
+            <li>Crack attenuating mixtures (CMA)</li>
+        </ul>
+        This grouping provides an initial breakdown of mixtures listed in
+        SiteManager. Within each of these groups, further subdivision by
+        type is possible. Thus PERF mixtures, for example, include both
+        Superpave (SP) and coarse matrix high binder (CMHB) mixtures, etc.
+        Selecting the parent node will select each of its associated children.
+        </br></br>All mixtures are selected by default.
+    </p>
+    <h3>Locations</h3>
+    <p>
+    A breakdown of districts and counties within these districts is provided
+    in the Texas tree to restrict queries to specific locations if required.
+    </br></br>All locations are selected by default.
+    </p>
+    <h3>From/To Date</h3>
+    <p>
+        Each of these options allows restricting the query to extract data between
+        the selected from and to dates. If only a from date is provided, then the query
+        will extract all records from that specific date. If a to date is provided, all
+        records up until the to date will be extracted. If neither a from nor a to date
+        is provided, the query will extract records regardless of date. The date query
+        uses the date that a lot was completed to identify these records.
+        </br></br>No from and to dates are selected by default.
+    </p>
+    <h3>Data Query</h3>
+    <p>
+        Select the type and nature of the data to query:
+    </p>
+    <h4>Agency</h4>
+    <p>
+        The query processes and outputs either TxDOT (default) or contractor data.
+    </p>
+    <h4>Level</h4>
+    <p>
+        Indicate how the data should be summarized, either by project (default) or by lot.
+        If by project, data collected on all lots within the project will be averaged.
+        If by lot, data collected on all sublots will be averaged.
+    </p>
+    <h4>Select query</h4>
+    <p>
+        Select the specific data to query. The follwing options are provided:
+    </p>
+    <ul>
+        <li>Lab Density: The density of laboratory comapcted specimen.</li>
+        <li>Voids in the mix (VIM): The air voids in the mix determined from road cores.</li>
+        <li>Voids in the mineral aggregate (VMA): VMA determine from plant mix.</li>
+    </ul>
+</body>
+</html>
